@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 paskaita</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            max-width: 1920px;
+            margin: 0 auto;
+            font-family: Verdana, Arial, sans-serif;
+            line-height: 1.25rem;
+            color:#333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .area {
+            display: flex;
+            /* flex-direction:row; */
+            /* flex-wrap: wrap; */
+
+            flex-flow: row wrap;
+            align-items: stretch;
+            justify-content: space-between;
+            margin-left: auto;
+        }
+
+        .navbar-component {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0,0.12);
+        }
+
+        .brand {
+            display:block;
+            font-size: 1rem;
+            color: #777;
+            margin: 1.375rem; 
+        }
+
+        .list {
+            display:flex;
+        }
+
+        .item {
+            display: block;
+            height: 4rem;
+            line-height: 4rem;
+            padding-left: 1.375rem;
+            padding-right: 1.375rem;
+            text-transform: uppercase;
+            color: #555;
+            font-size: 0.875rem;
+        }
+
+        .item.-link {
+            border-bottom: 4px solid transparent;
+        }
+
+        .item.-link:hover {
+            color: #333;
+            border-bottom-color: #673ab7 ;
+        }
+
+        .icon {
+            position:relative;
+        }
+
+        .icon, .icon:after, .icon:before {
+            display: block;
+            width: 1.5rem;
+            height: 0.1875rem;
+            background-color: #555555;
+            transition: background-color 0.3s linear, transform 0.3s linear;
+
+        }
+
+        .icon:after, .icon:before {
+            position:absolute;
+            content:"";
+        }
+
+        .icon:after {
+            top: 0.5rem;
+        }
+
+        .icon:before {
+            top: -0.5rem;
+        }
+
+        .toggle {
+            display: none;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 1.375rem;
+        }
+
+
+        .toggle.active .icon {
+            background-color: transparent;
+        }
+
+        .toggle.active .icon:before {
+            transform: translateY(0.5rem) rotate(45deg);
+        }
+
+        .toggle.active .icon:after {
+            transform: translateY(-0.5rem) rotate(-45deg);
+        }
+
+        .zalia {
+            background-color: green ;
+        }
+
+        @media screen and (max-width: 791px) {
+
+            .container {
+                margin-top: 4.25rem;
+            }
+
+            .navbar-component {
+                padding-top: 0.125rem;
+                padding-bottom: 0.125rem;
+                position: absolute;
+                width: 100%;
+                top: 0;
+            }
+
+            .area {
+                flex-direction: column;
+            }
+
+            .toggle {
+                display:block;
+                position: absolute;
+                right: 0;
+                top: 0.5rem;
+            }
+
+            .list {
+                display:none;
+                flex-flow: column wrap;
+            }
+
+            .list.active {
+                display:flex;
+            }
+
+
+        }
+
+        .kvadratelis {
+            width: 200px;
+            height: 200px;
+            background-color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-component">
+            <div class="navbar area">
+                <a href="#" class="brand">Įmonė</a>
+
+                <nav id="navigation" class="list">
+                    <a href="#" class="item -link">Pagrindinis</a>
+                    <a href="#" class="item -link" >Straipsniai</a> 
+                    <a href="#" class="item -link">Projektai</a>
+                    <a href="#"class="item -link">Resursai</a>
+                    <a href="#" class="item -link">Apie mane</a>
+                    <span class="item">
+                        <i class="fa fa-search"></i>
+                    </span> 
+                </nav>
+
+                <button id="hamburger" class="toggle">
+                    <span class="icon"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="kvadratelis">
+
+        </div>
+    </div>
+    <script>
+
+        document.querySelector('.toggle').onclick = function() {
+           this.classList.toggle('active');
+           document.querySelector('.list').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

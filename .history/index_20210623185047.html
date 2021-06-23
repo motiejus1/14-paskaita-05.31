@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 paskaita</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            max-width: 1920px;
+            margin: 0 auto;
+            font-family: Verdana, Arial, sans-serif;
+            line-height: 1.25rem;
+            color:#333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .area {
+            display: flex;
+            /* flex-direction:row; */
+            /* flex-wrap: wrap; */
+
+            flex-flow: row wrap;
+            align-items: stretch;
+            justify-content: space-between;
+            margin-left: auto;
+        }
+
+        .navbar-component {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0,0.12);
+        }
+
+        .brand {
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-component">
+            <div class="navbar area">
+                <a href="#" class="brand">Įmonė</a>
+
+                <nav id="navigation" class="list">
+                    <a href="#" class="item -link">Pagrindinis</a>
+                    <a href="#" class="item -link" >Straipsniai</a> 
+                    <a href="#" class="item -link">Projektai</a>
+                    <a href="#"class="item -link">Resursai</a>
+                    <a href="#" class="item -link">Apie mane</a>
+                    <span class="item">
+                        <i class="fa fa-search"></i>
+                    </span> 
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
